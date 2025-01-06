@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"testproject/greet"
+)
 
 const englishHelloPrefix = "Hello, "
 
@@ -28,5 +32,7 @@ func Hello(name string, lang string) string {
 
 func main() {
 	fmt.Println(Hello("Marko", "English"))
+
+	greet.Greet(os.Stdout, "Marko")
 
 }
